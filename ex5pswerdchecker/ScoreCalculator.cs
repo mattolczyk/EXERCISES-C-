@@ -10,39 +10,49 @@ namespace ex5pswerdchecker
 {
     public enum PasswordScore
     {
-        blank = 0,
-        veryweak = 1,
-        weak = 2,
-        medium = 3,
-        strong = 4,
-        verystrong = 5
+        Blank = 0,
+        VeryWeak = 1,
+        Weak = 2,
+        Medium = 3,
+        Strong = 4,
+        VeryStrong = 5
     }
 
+
     public class ScoreCalculator
+    {
+        public PasswordScore CheckStrength(string password)
         {
-            public int  CheckStrength(string password)
+            int score = 1;
+
+            if (password.Length < 1)
             {
-                int score = 1;
+                Console.WriteLine("Please provide your password.");
+                return PasswordScore.Blank;
 
-                if (password.Length < 1)
-                    return 0;
-                if (password.Length < 4)
-                    return 1;
-
-            if (password.Length >= 8)
-            { score = score + 1; }
-            if (password.Length >= 12)
-            { score = score + 1; }
-            if (Regex.Match(password, @"/\d+/", RegexOptions.ECMAScript).Success)
-            { score = score + 1; }
-            if (Regex.Match(password, @"/[a-z]/", RegexOptions.ECMAScript).Success && Regex.Match(password, @"/[A-Z]/", RegexOptions.ECMAScript).Success)
-            { score = score + 1; }
-            if (Regex.Match(password, @"/.[!,@,#,$,%,^,&,*,?,_,~,-,£,(,)]/", RegexOptions.ECMAScript).Success)
-            { score = score + 1; }
-
-            return score;
             }
+            if (password.Length < 4)
+            {
+                Console.WriteLine("Your password is too short - it should consist of at least 4 characters");
+                return PasswordScore.VeryWeak;
+                //return (PasswordScore)1;
+            }
+            
+            if (password.Length >= 10)
+            { score = score + 1; }
+            if (Regex.Match(password, @"\d+", RegexOptions.ECMAScript).Success)
+            { score = score + 1; }
+            else Console.WriteLine("Suggestion: consider adding digits to your password.");
+            if (Regex.Match(password, @"[a-z]", RegexOptions.ECMAScript).Success && Regex.Match(password, @"[A-Z]", RegexOptions.ECMAScript).Success)
+            { score = score + 1; }
+            else Console.WriteLine("Suggestion: consider using lowercase and uppercase characters in your password.");
+            if (Regex.Match(password, @"[!,?,@,#,$,%,^,&,*]").Success)
+            { score = score + 1; }
+            else Console.WriteLine("Suggestion: consider adding special characters to your password. Eg. !@#$%^&*");
+
+            return (PasswordScore)score;
         }
+    }
 
 }
 
