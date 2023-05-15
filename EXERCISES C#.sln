@@ -13,7 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C05EX_textManager", "C05EX_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C06EX_taskWeather", "C06EX_taskWeather\C06EX_taskWeather.csproj", "{4A5A5880-D8DD-4A0A-BB64-E585A294013F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex5pswerdchecker", "ex5pswerdchecker\ex5pswerdchecker.csproj", "{3ED28A74-9FA5-48E3-8DA3-E44985AABE50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ex5pswerdchecker", "ex5pswerdchecker\ex5pswerdchecker.csproj", "{3ED28A74-9FA5-48E3-8DA3-E44985AABE50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex1wordcounter", "ex1wordcounter\ex1wordcounter.csproj", "{2AADC948-94FB-4B3E-9A7F-73A49B59ED64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex6hangmanGame", "ex6hangmanGame\ex6hangmanGame.csproj", "{7490E722-4343-4838-BAC0-479E56B49A07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{3ED28A74-9FA5-48E3-8DA3-E44985AABE50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3ED28A74-9FA5-48E3-8DA3-E44985AABE50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3ED28A74-9FA5-48E3-8DA3-E44985AABE50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AADC948-94FB-4B3E-9A7F-73A49B59ED64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AADC948-94FB-4B3E-9A7F-73A49B59ED64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AADC948-94FB-4B3E-9A7F-73A49B59ED64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AADC948-94FB-4B3E-9A7F-73A49B59ED64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7490E722-4343-4838-BAC0-479E56B49A07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7490E722-4343-4838-BAC0-479E56B49A07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7490E722-4343-4838-BAC0-479E56B49A07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7490E722-4343-4838-BAC0-479E56B49A07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
