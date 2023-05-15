@@ -3,9 +3,6 @@
 var folder = @".\Test";
 var txtFiles = Directory.GetFiles(folder, "*.txt");
 
-
-
-
 foreach (var txtFile in txtFiles)
 {
     var readFile = File.ReadAllText(txtFile);
@@ -13,6 +10,4 @@ foreach (var txtFile in txtFiles)
     System.Console.WriteLine($"Number of words in {txtFile}: " + str.Length);
 
 }
-
-
     Console.ReadLine();
